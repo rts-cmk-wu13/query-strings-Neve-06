@@ -7,4 +7,5 @@
         sectionElm.innerHTML = data.destinations.map(destination => `<a href="destination.html?id=${destination.id}">
             ${destination.title}
         </a>` ).join("")
+    document.querySelector("#root").append(sectionElm)
     })
