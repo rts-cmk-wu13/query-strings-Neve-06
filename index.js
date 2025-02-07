@@ -4,8 +4,10 @@
     .then(response => response.json())
     .then(data => {
         let sectionElm = document.createElement("section")
-        sectionElm.innerHTML = data.destinations.map(destination => `<a href="destination.html?id=${destination.id}">
+        sectionElm.innerHTML = data.destinations.map(destination => `
+            <img src="/img/${destination.image}"></img>
+            <a href="destination.html?id=${destination.id}">
             ${destination.title}
-        </a>` ).join("")
+            </a>` ).join("")
     document.querySelector("#root").append(sectionElm)
     })
