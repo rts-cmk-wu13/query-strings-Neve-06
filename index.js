@@ -1,4 +1,4 @@
-
+let favorites = []
 
     fetch("/data/destinations.json")
     .then(response => response.json())
@@ -17,7 +17,8 @@
 
             sectionElm.querySelectorAll(".card__favoritebtn").forEach(function(button){
                 button.addEventListener("click", function(event){
-                    console.log(event.target);
+                    favorites.push(event.target.dataset.favid);
+                    console.log(favorites);
                     
             })
         
