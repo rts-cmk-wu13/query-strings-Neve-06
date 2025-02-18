@@ -10,18 +10,6 @@ function readFromLocalStorage(key){
 }
 
 function deleteFromLocalStorage(key){
-    let value = localStorage.removeItem(key)
-    console.log(value);
-    
+    localStorage.removeItem(key)
+    return "The element with key " + key + " was deleted";
 }
-
-
-
-let success = saveToLocalStorage("favorites", [1,5,8])
-console.log(success);
-
-let myFavorites = readFromLocalStorage("favorites")
-console.log(myFavorites);
-
-
-deleteFromLocalStorage("tomat")
