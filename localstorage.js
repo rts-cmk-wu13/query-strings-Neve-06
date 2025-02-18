@@ -5,7 +5,12 @@ function saveToLocalStorage(key, value){
 
 
 function readFromLocalStorage(key){
-    let value = JSON.parse(localStorage.getItem(key))
+    return JSON.parse(localStorage.getItem(key))
+    
+}
+
+function deleteFromLocalStorage(key){
+    let value = localStorage.removeItem(key)
     console.log(value);
     
 }
@@ -15,4 +20,8 @@ function readFromLocalStorage(key){
 let success = saveToLocalStorage("favorites", [1,5,8])
 console.log(success);
 
-readFromLocalStorage("hest")
+let myFavorites = readFromLocalStorage("favorites")
+console.log(myFavorites);
+
+
+deleteFromLocalStorage("tomat")
