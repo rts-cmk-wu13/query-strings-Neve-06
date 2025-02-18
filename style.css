@@ -70,3 +70,7 @@ footer>* {
     grid-column: content;
     display: block;
 }
+
+.card__favoritebtn--selected{
+    background-color: red;
+}
