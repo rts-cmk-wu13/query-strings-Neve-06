@@ -17,8 +17,17 @@ let favorites = []
 
             sectionElm.querySelectorAll(".card__favoritebtn").forEach(function(button){
                 button.addEventListener("click", function(event){
-                    favorites.push(event.target.dataset.favid);
-                    console.log(favorites);
+                    let currentId = event.target.dataset.favid;
+                    if (favorites.includes(currentId)){
+                        let newFavorites = favorites.filter(id => id != currentId)
+                        favorites = newFavorites
+                        console.log(favorites);
+                        
+                    }else {
+                        favorites.push(currentId)
+                        console.log(favorites);
+                        
+                    }
                     
             })
         
